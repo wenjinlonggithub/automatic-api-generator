@@ -8,6 +8,6 @@ import ${entityImport};
  * @author ${config.author}
  * @since ${Date}
  */
-public interface ${mapper} extends BaseMapper<${entity}> {
+public interface ${mapper} extends Mapper<${entity}> {
 
 }

@@ -23,7 +23,7 @@ public class ${entity} implements Serializable {
      * $column.columnComment
      */
 #if($column.columnKey == "PRI")
-@Id
+    @Id
 #else
 #if($column.fill)
     @Column(name = "`$column.column`")

@@ -32,7 +32,7 @@ public class ${serviceImpl} implements ${service} {
 
     @Override
     public List<${entity}> findAll() {
-        return ${data.requestName}Mapper.selectList(null);
+        return ${data.requestName}Mapper.select(null);
     }
 
     @Override

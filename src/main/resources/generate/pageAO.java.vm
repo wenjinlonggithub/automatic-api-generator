@@ -1,7 +1,7 @@
 package ${pageAOPackage};
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import xyz.chaobei.common.domain.BaseModel;
+import cn.com.yb.hospitalservice.core.model.BaseModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import lombok.Getter;

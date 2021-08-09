@@ -14,8 +14,6 @@ import ${saveAOImport};
 import ${pageAOImport};
 import ${serviceImport};
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 import java.util.List;
 /**
  * ${config.desc}请求控制层
@@ -98,7 +96,7 @@ public class ${controller} {
      **/
     @ApiOperation("保存一个${config.desc}")
     @PostMapping("/")
-    public CommonResult save(@RequestBody @Valid @ApiParam("保存字段") ${saveAO} params) {
+    public CommonResult save(@RequestBody @ApiParam("保存字段") ${saveAO} params) {
 
         log.info("${controller} save[保存一个${config.desc}] 保存字段={}", JSON.toJSONString(params));
         boolean isSave = ${data.requestName}Service.save(params);
@@ -119,7 +117,7 @@ public class ${controller} {
      **/
     @ApiOperation("修改一个${config.desc}")
     @PutMapping("/{${data.primaryName}}")
-    public CommonResult update(@PathVariable("${data.primaryName}") @ApiParam("被修改的ID") ${data.primaryType} id, @Valid @RequestBody @ApiParam("被修改的字段") ${saveAO} params) {
+    public CommonResult update(@PathVariable("${data.primaryName}") @ApiParam("被修改的ID") ${data.primaryType} id,@RequestBody @ApiParam("被修改的字段") ${saveAO} params) {
 
         ${entity} result = ${data.requestName}Service.findOne(id,true);
         log.info("${controller} update[验证${config.desc}] 查询结果={}", JSON.toJSONString(result));
@@ -141,7 +139,7 @@ public class ${controller} {
      **/
     @ApiOperation("删除一个${config.desc}")
     @DeleteMapping("/{${data.primaryName}}")
-    public CommonResult delete(@Valid @NotNull @PathVariable("${data.primaryName}") @ApiParam("被删除的ID") ${data.primaryType} id) {
+    public CommonResult delete(@NotNull @PathVariable("${data.primaryName}") @ApiParam("被删除的ID") ${data.primaryType} id) {
 
         ${entity} result = ${data.requestName}Service.findOne(id,true);
         log.info("${controller} delete[验证${config.desc}] 查询结果={}", JSON.toJSONString(result));

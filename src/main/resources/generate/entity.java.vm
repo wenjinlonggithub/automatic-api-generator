@@ -5,6 +5,9 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.Date;
 import java.lang.Integer;
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * ${config.desc}实体

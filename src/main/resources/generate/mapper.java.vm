@@ -1,6 +1,7 @@
 package ${mapperPackage};
 
 import ${entityImport};
+import tk.mybatis.mapper.common.Mapper;
 
 /**
  * ${config.desc}dao层

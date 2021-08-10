@@ -1,7 +1,7 @@
 package ${mapperPackage};
 
 import ${entityImport};
-import tk.mybatis.mapper.common.Mapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * ${config.desc}dao层
@@ -9,6 +9,6 @@ import tk.mybatis.mapper.common.Mapper;
  * @author ${config.author}
  * @since ${Date}
  */
-public interface ${mapper} extends Mapper<${entity}> {
+public interface ${mapper} extends BaseMapper<${entity}> {
 
 }

@@ -43,13 +43,15 @@
 
                 <el-table-column label="PageAO" width="150">
                     <template slot-scope="scope">
-                        <el-switch disabled v-model="scope.row.query" active-color="#13ce66" inactive-color="#eee"></el-switch>
+                        <el-switch disabled v-model="scope.row.query" active-color="#13ce66"
+                                   inactive-color="#eee"></el-switch>
                     </template>
                 </el-table-column>
 
                 <el-table-column label="Ins/UpdAO">
                     <template slot-scope="scope">
-                        <el-switch  disabled v-model="scope.row.insert" active-color="#13ce66" inactive-color="#eee"></el-switch>
+                        <el-switch disabled v-model="scope.row.insert" active-color="#13ce66"
+                                   inactive-color="#eee"></el-switch>
 
                         <el-select v-if="scope.row.insert" size="mini" v-model="scope.row.insertType" placeholder="请选择">
                             <el-option :value="null" :label="'不做校验'"></el-option>
@@ -79,7 +81,8 @@
             <el-form :inline="true" :model="generateObj" ref="defaultForm" class="demo-form-inline" :rules="rules">
 
                 <el-form-item label="生成路径" prop="filePath">
-                    <el-input v-model="generateObj.filePath" placeholder="/Users/mac/Documents/hospital/generator"></el-input>
+                    <el-input v-model="generateObj.filePath"
+                              placeholder="/Users/mac/Documents/hospital/generator"></el-input>
                 </el-form-item>
 
                 <el-form-item label="自定义包" prop="packages">
@@ -122,7 +125,7 @@
             generateObj: {
                 table: table,
                 author: '文金龙',
-                desc: 'xxx服务模块',
+                desc: table + '服务模块',
                 packages: 'cn.com.yb.hospital',
                 filePath: '/Users/mac/Documents/generator',
                 columns: null,

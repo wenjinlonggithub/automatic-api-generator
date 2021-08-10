@@ -1,6 +1,6 @@
 package ${pageAOPackage};
 
-import cn.com.yb.hospitalservice.core.model.BaseModel;
+import xyz.chaobei.common.domain.BaseModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import lombok.Getter;

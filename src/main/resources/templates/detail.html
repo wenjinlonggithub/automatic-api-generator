@@ -43,13 +43,13 @@
 
                 <el-table-column label="PageAO" width="150">
                     <template slot-scope="scope">
-                        <el-switch v-model="scope.row.query" active-color="#13ce66" inactive-color="#eee"></el-switch>
+                        <el-switch disabled v-model="scope.row.query" active-color="#13ce66" inactive-color="#eee"></el-switch>
                     </template>
                 </el-table-column>
 
                 <el-table-column label="Ins/UpdAO">
                     <template slot-scope="scope">
-                        <el-switch v-model="scope.row.insert" active-color="#13ce66" inactive-color="#eee"></el-switch>
+                        <el-switch  disabled v-model="scope.row.insert" active-color="#13ce66" inactive-color="#eee"></el-switch>
 
                         <el-select v-if="scope.row.insert" size="mini" v-model="scope.row.insertType" placeholder="请选择">
                             <el-option :value="null" :label="'不做校验'"></el-option>
@@ -154,9 +154,9 @@
                             item.primaryType = 'IdType.AUTO';
                         }
 
-                        item.insert = false;
+                        item.insert = true;
                         item.insertType = null;
-                        item.query = false;
+                        item.query = true;
                         item.fill = false;
                         item.fillType = 'FieldFill.INSERT';
                     })

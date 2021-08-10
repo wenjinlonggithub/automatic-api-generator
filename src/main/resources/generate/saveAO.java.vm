@@ -7,7 +7,6 @@ import lombok.Setter;
 import java.io.Serializable;
 import java.util.Date;
 import java.lang.Integer;
-import javax.validation.constraints.*;
 
 /**
  * ${config.desc} Ins/Upd AO对象

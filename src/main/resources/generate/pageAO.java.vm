@@ -1,6 +1,5 @@
 package ${pageAOPackage};
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import cn.com.yb.hospitalservice.core.model.BaseModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -27,7 +26,6 @@ public class ${pageAO} extends BaseModel {
      * $column.columnComment
      */
     @ApiModelProperty("$column.columnComment")
-    @TableField("`$column.column`")
     private $column.javaType $column.columnName;
 #end
 #end
